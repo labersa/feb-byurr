@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo Tiket Masuk | Riau Fantasi Labersa</title>
+
+<style>
+body{
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(135deg,#e3f2fd,#fffde7);
+  margin:0; padding:0;
+}
+.container{
+  max-width:520px;
+  margin:30px auto;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+  padding:25px;
+}
+.header img{width:100%; border-radius:14px;}
+h2{text-align:center; margin:20px 0 10px;}
+.price-info{
+  text-align:center;
+  background:#f1f8ff;
+  padding:16px;
+  border-radius:12px;
+  font-size:15px;
+}
+.badge{color:#d32f2f; font-weight:bold; font-size:16px;}
+label{font-weight:600; margin-top:14px; display:block;}
+input,textarea{
+  width:100%; padding:11px; margin-top:6px;
+  border-radius:10px; border:1px solid #ccc; font-size:15px;
+}
+.terms{
+  margin-top:16px; padding:14px;
+  background:#fff3cd; border-left:6px solid #ff9800;
+  border-radius:10px; font-size:14px;
+}
+.terms a{color:#0078d7; text-decoration:none; font-weight:600;}
+button{
+  margin-top:22px; width:100%;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff; border:none; padding:16px;
+  font-size:18px; border-radius:14px;
+  font-weight:bold; cursor:pointer;
+}
+button:hover{opacity:.9;}
+.notice{
+  text-align:center; color:#d32f2f; font-size:13px; margin-top:8px;
+}
+footer{text-align:center; font-size:13px; color:#555; margin-top:14px;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <img src="logo.png" alt="Riau Fantasi Labersa">
+  </div>
+
+  <h2>🎟️ PROMO FEB-BYURR</h2>
+
+  <div class="price-info">
+    <span class="badge">⚠️ WAJIB BOOKING</span><br><br>
+    Senin – Minggu: <b>Rp18.000</b><br><br>
+    ⏰ Jam Operasional: <b>09.00 – 17.00</b><br>
+    🔔 Berlaku sampai <b>18 Februari 2026</b>
+  </div>
+
+  <div class="terms">
+  📌 <b>Syarat & Ketentuan:</b><br><br>
+
+  • Promo ini didapat dengan <b>sistem pendaftaran</b> melalui
+    <b>No. Telepon / WhatsApp / isi form dibawah ini</b>:<br><br>
+
+  <!-- BARIS 1 -->
+  👉 
+  <a href="https://wa.me/628117696599" target="_blank">Hendra / 0811-7696-599</a> |
+  <a href="https://wa.me/6285271816098" target="_blank">Leo / 0852-7181-6098</a><br>
+
+  <!-- BARIS 2 -->
+  👉 
+  <a href="https://wa.me/6282385254987" target="_blank">Nova / 0823-8525-4987</a> |
+  <a href="https://wa.me/628117673499" target="_blank">Dedi / 0811-7673-499</a><br>
+
+  <!-- BARIS 3 -->
+  👉 
+  <a href="https://wa.me/6281266817331" target="_blank">Dika / 0812-6681-7331</a> |
+  <a href="https://wa.me/628887417489" target="_blank">Feby / 0888-7417-489</a><br><br>
+
+  • Pendaftaran tiket promo dimulai tanggal
+    <b>27 s/d 31 Januari 2026</b><br>
+
+  • <b>Tidak berlaku</b> pembelian tiket promo secara langsung
+    di <b>Labersa Waterpark</b><br>
+
+  • Wahana <b>Tower Slide</b> & <b>Kolam Arus</b> sedang perbaikan /
+    <i>maintenance</i> dan <b>ditutup sementara</b><br>
+
+  • Tiket sudah termasuk
+    <b>Wahana Baru (Boomerang Slide & Super Bowl)</b>,
+    <b>Kolam Dewasa</b>, <b>Kolam Bayi</b>, dan
+    <b>Kolam Adventure</b>
+</div>
+
+
+  <!-- FORM -->
+  <form onsubmit="sendToWA(); return false;">
+    <label>Nama Lengkap *</label>
+    <input type="text" id="nama" required>
+
+    <label>No HP / WhatsApp *</label>
+    <input type="tel" id="nomor" required placeholder="08xxxxxxxxxx">
+
+    <label>Tanggal Kunjungan *</label>
+    <input type="date" id="tanggal" required>
+
+    <label>Jumlah Tiket *</label>
+    <input type="number" id="jumlah" min="1" value="1" required>
+
+    <label>Catatan (Opsional)</label>
+    <textarea id="catatan" rows="3" placeholder="Contoh: rombongan / anak"></textarea>
+
+    <button type="submit">📲 BOOKING VIA WHATSAPP</button>
+  </form>
+
+  <div class="notice">
+    ⚠️ Tanpa booking via link ini, tiket promo tidak dapat digunakan
+  </div>
+
+  <footer>
+    © 2026 Riau Fantasi Labersa — Water & Theme Park
+  </footer>
+
+</div>
+
+<script>
+function sendToWA(){
+  const nama = document.getElementById("nama").value;
+  const nomor = document.getElementById("nomor").value;
+  const tanggal = document.getElementById("tanggal").value;
+  const jumlah = document.getElementById("jumlah").value;
+  const catatan = document.getElementById("catatan").value || "-";
+
+  const t = tanggal.split("-");
+  const tgl = t[2] + "-" + t[1] + "-" + t[0];
+
+  // WA tujuan utama (admin utama)
+  const waUtama = "628117696599";
+
+  const pesan =
+    "👋 Halo Admin Riau Fantasi Labersa!%0A%0A" +
+    "Saya ingin booking *PROMO FEB-BYURR Rp18.000* 🎟️%0A%0A" +
+    "👤 Nama: " + encodeURIComponent(nama) + "%0A" +
+    "📱 No HP: " + encodeURIComponent(nomor) + "%0A" +
+    "📅 Tanggal Kunjungan: " + tgl + "%0A" +
+    "🎫 Jumlah Tiket: " + jumlah + "%0A" +
+    "📝 Catatan: " + encodeURIComponent(catatan) + "%0A%0A" +
+    "⚠️ Booking via link resmi. Mohon konfirmasi. Terima kasih 🙏";
+
+  window.open("https://wa.me/" + waUtama + "?text=" + pesan, "_blank");
+}
+</script>
+
+</body>
+</html>
