@@ -151,7 +151,7 @@ function sendToWA(){
   const tgl = t[2] + "-" + t[1] + "-" + t[0];
 
   // WA tujuan utama (admin utama)
-  const waUtama = "6281378277008";
+  const waUtama = "628117696599";
 
   const pesan =
     "👋 Halo Admin Riau Fantasi Labersa!%0A%0A" +
@@ -161,6 +161,10 @@ function sendToWA(){
     "📅 Tanggal Kunjungan: " + tgl + "%0A" +
     "🎫 Jumlah Tiket: " + jumlah + "%0A" +
     "📝 Catatan: " + encodeURIComponent(catatan) + "%0A%0A" +
+    "📌 Info Penting:%0A" + 
+	"- Di atas 80 cm bayar tiket penuh%0A" + 
+	"- Bukti formulir booking wajib ditunjukkan saat kunjungan%0A%0A" + 
+	"✅ Terima kasih dan sampai jumpa di Riau Fantasi Labersa! 🌴";
     "⚠️ Booking via link resmi. Mohon konfirmasi. Terima kasih 🙏";
 
   window.open("https://wa.me/" + waUtama + "?text=" + pesan, "_blank");
@@ -169,6 +173,7 @@ function sendToWA(){
 
 </body>
 </html>
+
 
 
 
